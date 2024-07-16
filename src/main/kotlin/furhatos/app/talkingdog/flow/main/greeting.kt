@@ -10,7 +10,6 @@ import furhatos.records.Location
 val Greeting: State = state(Parent) {
     onEntry {
         furhat.attend(users.userClosestToPosition(Location(0.0, 0.0, 0.5)))
-        askForAnything("Hi there, anything you'd like to ask a talking dog?")
         goto(MainChat)
     }
 }

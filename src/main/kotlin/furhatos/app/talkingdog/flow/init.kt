@@ -25,8 +25,9 @@ val Init: State = state() {
         }
 
         /** Set the Persona */
+//        furhat.voice = AcapelaVoice("WillLittleCreature")
         furhat.voice = AcapelaVoice("WillOldMan")
-        furhat.character = "James"
+        furhat.character = "default"
 
         /** start the interaction */
         goto(InitFlow)

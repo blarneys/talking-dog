@@ -26,8 +26,8 @@ val MainChat = state(Parent) {
     onResponse {
         furhat.gesture(GazeAversion(2.0))
         val response = call {
-            OpenAIChatbot("The following is a conversation between Bouncer, the enthusiastic, pug who " +
-                    "was born with the ability to speak English, and a Person", "Person", "Bouncer")
+            OpenAIChatbot("The following is a conversation between Bouncer, the enthusiastic, British pug " +
+                    "who was born with the ability to speak English, and a Person.", "Person", "Bouncer")
                 .getNextResponse()
         } as String
         furhat.say(response)
