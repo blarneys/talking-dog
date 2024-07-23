@@ -23,6 +23,12 @@ val MainChat = state(Parent) {
             furhat.gesture(sniffing3, async = true)
         }, {
             furhat.gesture(panting1, async = true)
+        }, {
+            furhat.gesture(panting1, async = true)
+        }, {
+            furhat.gesture(panting1, async = true)
+        },{
+            furhat.gesture(growlPositive2)
         }, policy = RandomPolicy.DECK_RESHUFFLE_NO_REPEAT)
         furhat.listen()
     }
@@ -32,13 +38,12 @@ val MainChat = state(Parent) {
     }
 
     onResponse {
-//        furhat.gesture(GazeAversion(2.0))
 
         val response = call {
-            OpenAIChatbot("The following is a conversation between Bouncer, the silly, British dog " +
-                    "who was born with the ability to speak English, and a Person. Bouncer speaks simply, and only " +
-                    "knows things that dogs know about.",
-                "Person", "Bouncer")
+            OpenAIChatbot("The following is a conversation between Bouncer, the silly, British pug " +
+                    "who was born with the ability to speak English, and a Human. Bouncer speaks very simply, and" +
+                    " only knows things that dogs know about.",
+                "Human", "Bouncer")
                 .getNextResponse()
         } as String
         furhat.say(response)

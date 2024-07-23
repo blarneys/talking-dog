@@ -1,24 +1,9 @@
-package furhatos.app.talkingdog.flow
+package furhatos.app.talkingdog.utils
 
 import furhatos.flow.kotlin.*
 import furhatos.gestures.ARKitParams
-import furhatos.gestures.BasicParams
 import furhatos.gestures.defineGesture
 import kotlin.random.Random
-
-
-fun FlowControlRunner.askForAnything(text: String) {
-
-    call(state {
-        onEntry {
-            furhat.ask(text)
-        }
-        onResponse {
-            terminate()
-        }
-    })
-
-}
 
 val random = Random(0)
 

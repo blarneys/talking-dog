@@ -1,6 +1,5 @@
 package furhatos.app.talkingdog.flow.main
 
-import furhatos.app.talkingdog.flow.askForAnything
 import furhatos.app.talkingdog.flow.Parent
 import furhatos.app.talkingdog.flow.chatbot.MainChat
 import furhatos.flow.kotlin.*

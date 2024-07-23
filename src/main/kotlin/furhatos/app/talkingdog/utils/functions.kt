@@ -28,7 +28,6 @@ fun _defineGesture(name: String? = null,
                    audioURL: String? = null,
                    texture: String? = null,
                    ledPixel: Pixel? = null,
-                   async: Boolean = true,
                    definition: GestureBuilder.() -> Unit): Gesture {
     val gesture = defineGesture(name, strength, duration, defaultPriority, definition)
 

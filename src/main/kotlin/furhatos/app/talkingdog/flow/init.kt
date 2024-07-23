@@ -11,6 +11,7 @@ import furhatos.flow.kotlin.state
 import furhatos.flow.kotlin.users
 import furhatos.flow.kotlin.voice.AcapelaVoice
 import furhatos.flow.kotlin.voice.PollyNeuralVoice
+import furhatos.flow.kotlin.voice.PollyVoice
 import furhatos.nlu.SimpleIntent
 
 val Init: State = state() {
@@ -25,7 +26,7 @@ val Init: State = state() {
         }
 
         /** Set the Persona */
-        furhat.voice = AcapelaVoice("WillLittleCreature")
+        furhat.voice = AcapelaVoice("WillLittleCreature", rate=1.3)
         furhat.character = "default"
 
         /** start the interaction */

@@ -1,6 +1,7 @@
 package furhatos.app.talkingdog.flow
 
 import furhatos.app.talkingdog.flow.main.Idle
+import furhatos.app.talkingdog.utils.GazeAversion
 import furhatos.event.actions.ActionLipSync
 import furhatos.flow.kotlin.*
 
