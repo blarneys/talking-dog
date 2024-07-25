@@ -40,7 +40,7 @@ val MainChat = state(Parent) {
     onResponse {
 
         val response = call {
-            OpenAIChatbot("The following is a conversation between Bouncer, the silly, British pug " +
+            OpenAIChatbot("The following is a conversation between Bouncer, the enthusiastic, British pug " +
                     "who was born with the ability to speak English, and a Human. Bouncer speaks very simply, and" +
                     " only knows things that dogs know about.",
                 "Human", "Bouncer")
