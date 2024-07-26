@@ -2,26 +2,23 @@ package furhatos.app.talkingdog.flow.chatbot
 
 import com.theokanning.openai.OpenAiService
 import com.theokanning.openai.completion.CompletionRequest
-import com.theokanning.openai.completion.chat.ChatCompletionRequest
-import com.theokanning.openai.completion.chat.ChatMessage
 import furhatos.flow.kotlin.DialogHistory
 import furhatos.flow.kotlin.Furhat
 
 /** API Key to GPT3 language model. Get access to the API and generate your key from: https://openai.com/api/ **/
-val serviceKey = "sk-proj-3QlW4MC2T5LUrj5Y9EqIT3BlbkFJt5S0Xf5zly3DwXyJL5qC"
+val serviceKey = "Your API key"
 
-val service = OpenAiService("sk-proj-3QlW4MC2T5LUrj5Y9EqIT3BlbkFJt5S0Xf5zly3DwXyJL5qC")
+val service = OpenAiService("Your API key")
 
 class OpenAIChatbot(val description: String, val userName: String, val agentName: String) {
 
     val service = OpenAiService(serviceKey)
 
-    // Read more about these settings: https://beta.openai.com/docs/introduction
-    var temperature = 0.9 // Higher values means the model will take more risks. Try 0.9 for more creative applications, and 0 (argmax sampling) for ones with a well-defined answer.
-    var maxTokens = 100 // Length of output generated. 1 token is on average ~4 characters or 0.75 words for English text
-    var topP = 1.0 // 1.0 is default. An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered.
-    var frequencyPenalty = 0.0 // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
-    var presencePenalty = 0.6 // Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
+    var temperature = 0.9
+    var maxTokens = 100
+    var topP = 1.0
+    var frequencyPenalty = 0.0
+    var presencePenalty = 0.6
 
     fun getNextResponse(): String {
         /** The prompt for the chatbot includes a context of ten "lines" of dialogue. **/
